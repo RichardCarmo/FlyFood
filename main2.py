@@ -1,5 +1,5 @@
 import time
-from leitura_entrada import ler_entrada
+from src.leitura_entrada import ler_entrada
 
 def buscar_menor_rota_otimizada(ponto_atual, pontos_restantes, caminho_atual, distancia_atual, coords, melhor_solucao):
     #Se a distância atual já for maior ou igual à melhor distância encontrada, interrompe o ramo
@@ -55,7 +55,7 @@ def main(caminho_arquivo):
 
     fim_v2 = time.time()
     tempo_v2_ms = (fim_v2 - inicio_v2) * 1000  
-    trajeto_v2 = "R -> " + " -> ".join(melhor_solucao['rota']) + " -> R"
+    trajeto_v2 = (" ".join(melhor_solucao['rota']))
 
     print(f"Melhor trajeto: {trajeto_v2}")
     print(f"Distância total: {melhor_solucao['distancia']} dronômetros")
