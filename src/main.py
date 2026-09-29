@@ -1,3 +1,4 @@
+import time
 from leitura_entrada import ler_entrada
 
 
@@ -47,6 +48,7 @@ def distance_calculator(permutation, data):
 
 
 def main(caminho_arquivo):
+    inicio = time.time()
     locais, chaves = ler_entrada(caminho_arquivo)
 
     if locais is None:
@@ -55,18 +57,18 @@ def main(caminho_arquivo):
     rotas = permutation(chaves)
     melhor_rota, distancia = distance_calculator(rotas, locais)
 
-    tempo = distancia
+    fim = time.time()
+    tempo_ms = (fim - inicio) * 1000
 
     trajeto = "R -> " + " -> ".join(melhor_rota) + " -> R"
 
     resultado = (
         f"Melhor trajeto: {trajeto}\n"
         f"Distância total: {distancia}\n"
-        f"Tempo percorrido: {tempo} minutos"
+        f"Tempo percorrido: {tempo_ms:.4f} ms"
     )
 
     print(resultado)
 
 if __name__ == "__main__":
     main("FlyFood/entradas/matriz1.txt")
-    
