@@ -39,9 +39,9 @@ O projeto conta com duas implementações do algoritmo de roteamento, cada uma e
 src/main.py - força bruta (**permutação completa**): 
 
 ```text
-Melhor trajeto: R -> A -> D -> C -> B -> R
+Melhor trajeto: A D C B 
 Distância total: 14
-Tempo percorrido: 14 minutos
+Tempo percorrido: 0.4008 ms
 ```
 
 main2.py - busca com poda (**backtracking otimizado**):
