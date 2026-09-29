@@ -60,7 +60,7 @@ def main(caminho_arquivo):
     fim = time.time()
     tempo_ms = (fim - inicio) * 1000
 
-    trajeto = "R -> " + " -> ".join(melhor_rota) + " -> R"
+    trajeto = " ".join(melhor_rota)
 
     resultado = (
         f"Melhor trajeto: {trajeto}\n"
