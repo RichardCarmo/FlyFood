@@ -64,7 +64,7 @@ def main(caminho_arquivo):
 
     resultado = (
         f"Melhor trajeto: {trajeto}\n"
-        f"Distância total: {distancia}\n"
+        f"Distância total: {distancia} dronômetros\n"
         f"Tempo percorrido: {tempo_ms:.4f} ms"
     )
 
